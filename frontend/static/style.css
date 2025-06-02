@@ -1,0 +1,122 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #f0f4f8;
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+}
+
+.chatbox {
+  background: white;
+  width: 400px;
+  max-width: 95vw;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  height: 600px;
+}
+
+#messages {
+  flex: 1;
+  padding: 20px;
+  overflow-y: auto;
+  border-bottom: 1px solid #eee;
+}
+
+#messages p {
+  margin: 10px 0;
+  line-height: 1.4;
+  padding: 10px 14px;
+  border-radius: 12px;
+  max-width: 80%;
+}
+
+.user-message {
+  background-color: #dcf8c6;
+  align-self: flex-end;
+  color: #202020;
+}
+
+.bot-message {
+  background-color: #e4e6eb;
+  align-self: flex-start;
+  color: #333;
+}
+
+.bot-message.error {
+  color: #b00020;
+  font-weight: bold;
+}
+
+#userInput {
+  border: none;
+  padding: 15px 20px;
+  font-size: 1rem;
+  width: calc(100% - 100px);
+  outline: none;
+  border-radius: 0 0 0 12px;
+  box-sizing: border-box;
+  background-color: #f5f7fa;
+}
+
+button {
+  width: 100px;
+  border: none;
+  background: #4a90e2;
+  color: white;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 0 0 12px 0;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background: #357ab7;
+}
+/* Container holding input + button */
+.chatbox > div:last-child {
+  display: flex;
+  border-top: 1px solid #eee;
+}
+
+/* Text input styling */
+#userInput {
+  flex: 1; /* take all available space */
+  border: none;
+  padding: 15px 20px;
+  font-size: 1rem;
+  outline: none;
+  border-radius: 0 0 0 12px;
+  background-color: #f5f7fa;
+  box-sizing: border-box;
+}
+
+/* Button styling */
+button {
+  width: 100px;
+  border: none;
+  background: #4a90e2;
+  color: white;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 0 0 12px 0;
+  transition: background 0.3s ease;
+  box-sizing: border-box;
+}
+
+button:hover {
+  background: #357ab7;
+}
+
+/* Optional: Button active/focus style for accessibility */
+button:focus,
+button:active {
+  outline: none;
+  background: #2a5d9f;
+}
